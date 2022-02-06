@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Terminate already running bar instances
+killall -q polybar
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+# Launch polybar
+polybar main -c ~/.config/bspwm/polybar/config &
+#polybar main_laptop -c ~/.config/bspwm/polybar/config &
+#killall -q polybar
+#polybar -c ~/.config/bspwm/polybar/config -r first &
+#polybar -c ~/.config/bspwm/polybar/config -r second &
+#polybar -c ~/.config/bspwm/polybar/config -r third &
+#polybar -c ~/.config/bspwm/polybar/config -r fourth &
+#polybar -c ~/.config/bspwm/polybar/config -r fifth &
+#polybar -c ~/.config/bspwm/polybar/config -r sixth &
+#polybar -c ~/.config/bspwm/polybar/config -r seven &

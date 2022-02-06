@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "$1" = "vpn" ]
+then
+	echo -n "Elrua21AYUitqJa9UbI6daj" | xclip -selection clipboard
+	echo VPN password copied to clipboard
+elif [ "$1" = "github" ]
+then
+	echo -n "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" | xclip
+	echo github token copied to primary
+fi
